@@ -81,8 +81,8 @@ export function WhatsAppMessenger() {
         setStatus('success');
         setStatusMessage(`Messages sent to ${successCount} recipients. ${failedCount > 0 ? `${failedCount} failed.` : ''}`);
       } else {
-        setStatus('success');
-        setStatusMessage(`Messages sent to all recipients.`);
+        setStatus('error');
+        setStatusMessage(`An error occurred, please contact the code manager.`);
       }
     } catch (error) {
       setStatus('error');
